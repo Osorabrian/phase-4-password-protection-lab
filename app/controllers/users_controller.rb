@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-    def create_table
+    def create
         user = User.create(user_params)
         if user.valid?
             render json: user, status: :created
